@@ -1,0 +1,84 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary-rgb: 14 165 233;        /* #0EA5E9 */
+  --primary-hover-rgb: 2 132 199;   /* #0284C7 */
+  --primary: #0EA5E9;
+  --primary-hover: #0284C7;
+  --message-sent: #E0F2FE;
+  --background: #F8FAFC;
+  --surface: #FFFFFF;
+  --text-primary: #0F172A;
+  --text-secondary: #64748B;
+  --success: #22C55E;
+  --border: #E2E8F0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: var(--background);
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: var(--text-primary);
+}
+
+@layer components {
+  /* Primary button */
+  .btn-primary {
+    @apply bg-brand text-white font-medium px-5 py-2.5 rounded-btn
+           hover:bg-brand-hover transition-all duration-200
+           focus:outline-none focus:ring-2 focus:ring-brand/40
+           disabled:opacity-60 disabled:cursor-not-allowed
+           shadow-soft;
+  }
+
+  /* Outlined secondary button */
+  .btn-secondary {
+    @apply bg-white text-brand font-medium px-5 py-2.5 rounded-btn
+           border border-app-border hover:bg-brand-soft
+           transition-all duration-200 focus:outline-none;
+  }
+
+  /* Card */
+  .chat-card {
+    @apply bg-white rounded-card shadow-card border border-app-border;
+  }
+
+  /* Input */
+  .chat-input {
+    @apply w-full px-4 py-2.5 rounded-btn border border-app-border bg-white
+           text-msg-charcoal placeholder-slate-400
+           focus:outline-none focus:ring-2 focus:ring-brand/30 focus:border-brand
+           transition-all duration-200;
+  }
+
+  /* Sent message bubble */
+  .bubble-sent {
+    @apply bg-msg-sent text-msg-charcoal rounded-chat rounded-br-sm
+           px-4 py-2.5 max-w-xs shadow-soft border border-sky-200;
+  }
+
+  /* Received message bubble */
+  .bubble-received {
+    @apply bg-msg-received text-msg-charcoal rounded-chat rounded-bl-sm
+           px-4 py-2.5 max-w-xs shadow-card border border-app-border;
+  }
+
+  /* Active sidebar item */
+  .sidebar-active {
+    @apply bg-brand-light rounded-btn;
+  }
+
+  /* Feature / stats card */
+  .capsule-card {
+    @apply bg-brand-soft border border-app-border rounded-card p-4 shadow-soft;
+  }
+}

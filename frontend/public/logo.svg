@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" fill="none">
+  <!-- Back / Secondary Bubble -->
+  <path d="M14 26C14 17.1634 21.1634 10 30 10C38.8366 10 46 17.1634 46 26C46 34.8366 38.8366 42 30 42C26.5414 42 23.3377 40.9026 20.7099 39.0345L12 41L14.7334 33.7145C14.2547 31.3323 14 28.7061 14 26Z" fill="#38BDF8" fill-opacity="0.85"/>
+  <!-- Front / Primary Bubble -->
+  <path d="M2 18C2 9.16344 9.16344 2 18 2C26.8366 2 34 9.16344 34 18C34 26.8366 26.8366 34 18 34C14.5414 34 11.3377 32.9026 8.7099 31.0345L0 33L2.73343 25.7145C2.25473 23.3323 2 20.7061 2 18Z" fill="#0EA5E9"/>
+  <!-- Accent Dots on front bubble -->
+  <circle cx="12" cy="18" r="2" fill="#FFFFFF"/>
+  <circle cx="18" cy="18" r="2" fill="#FFFFFF"/>
+  <circle cx="24" cy="18" r="2" fill="#FFFFFF"/>
+</svg>
